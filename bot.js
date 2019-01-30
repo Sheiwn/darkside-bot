@@ -15,7 +15,7 @@ client.on('ready', () => {
     
      // List all channels        
     
-    var generalChannel = client.channels.get("540116774369099786inv") // Replace with known channel ID
+    var generalChannel = client.channels.get("540173603342254110") // Replace with known channel ID
     
     client.on('message', (receivedMessage) => {
     // Prevent bot from responding to its own messages
@@ -30,7 +30,7 @@ client.on('ready', () => {
         receivedMessage.channel.send("Message received from " +
             receivedMessage.author.toString() + ": " + receivedMessage.content)
     }
-    if (receivedMessage.content.startsWith("!")) {
+    if (receivedMessage.content.startsWith(".")) {
         processCommand(receivedMessage)
     }
 })
@@ -54,12 +54,10 @@ function processCommand(receivedMessage) {
 
     if (primaryCommand == "help") {
         helpCommand(arguments, receivedMessage)
-    } else if (primaryCommand == "multiply") {
-        multiplyCommand(arguments, receivedMessage)
-    } else if (primaryCommand == "Ping") {
+    } else if (primaryCommand == "ping") {
         pongCommand(arguments, receivedMessage)
     } else {
-        receivedMessage.channel.send("I don't understand the command. Try `!help` or `!multiply`")
+        receivedMessage.channel.send("Je ne comprend pas votre demande :(")
     }
 }
 
@@ -73,18 +71,6 @@ function helpCommand(arguments, receivedMessage) {
     } else {
         receivedMessage.channel.send("I'm not sure what you need help with. Try `!help [topic]`")
     }
-}
-
-function multiplyCommand(arguments, receivedMessage) {
-    if (arguments.length < 2) {
-        receivedMessage.channel.send("Not enough values to multiply. Try `!multiply 2 4 10` or `!multiply 5.2 7`")
-        return
-    }
-    let product = 1 
-    arguments.forEach((value) => {
-        product = product * parseFloat(value)
-    })
-    receivedMessage.channel.send("The product of " + arguments + " multiplied together is: " + product.toString())
 }
 
 client.login(process.env.bot_token)
