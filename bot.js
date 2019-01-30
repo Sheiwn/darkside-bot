@@ -33,7 +33,7 @@ client.on('ready', () => {
     if (receivedMessage.content.startsWith(".")) {
         processCommand(receivedMessage)
     }
-        if (receivedMessage.content.startWith("_")){
+        if (receivedMessage.content.startsWith("_")){
         processInfo(receivedMessage)
     }
 })
