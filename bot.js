@@ -65,10 +65,10 @@ function processInfo(receivedMessage) {
 
 }
 
-function elesisInfo(receivedMessage){
+function elesisInfo(argumentInfo, receivedMessage){
     receivedMessage.channel.send("test1")
 }
-function lassInfo(receivedMessage){
+function lassInfo(argumentInfo, receivedMessage){
     receivedMessage.channel.send("test2")
 }
 
