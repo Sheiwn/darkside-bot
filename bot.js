@@ -12,11 +12,7 @@ client.on('ready', () => {
             console.log(` -- ${channel.name} (${channel.type}) - ${channel.id}`)
         })
     })
-    
-     // List all channels        
-    
-    var generalChannel = client.channels.get("540173603342254110") // Replace with known channel ID
-    
+         
     client.on('message', (receivedMessage) => {
     // Prevent bot from responding to its own messages
     // Prevent bot from responding to its own messages
@@ -40,10 +36,6 @@ client.on('ready', () => {
     // Set bot status to: "Playing with JavaScript"
     client.user.setActivity("Grand Chase Mobile")
 
-    // Alternatively, you can set the activity to any of the following:
-    // PLAYING, STREAMING, LISTENING, WATCHING
-    // For example:
-    // client.user.setActivity("TV", {type: "WATCHING"})
 })
 
 function processInfo(receivedMessage) {
@@ -100,9 +92,9 @@ function pongCommand(arguments, receivedMessage){
 
 function helpCommand(arguments, receivedMessage) {
     if (arguments.length > 0) {
-        receivedMessage.channel.send("It looks like you might need help with " + arguments)
+        receivedMessage.channel.send("Il me semble que vous avez besoin d'aide concernant " + arguments)
     } else {
-        receivedMessage.channel.send("I'm not sure what you need help with. Try `!help [topic]`")
+        receivedMessage.channel.send("Je ne suis pas sûr de ce que vous avez besoin. Essayez `!help [topic]`")
     }
 }
 
