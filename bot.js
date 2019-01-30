@@ -55,11 +55,15 @@ function processInfo(receivedMessage) {
     console.log("Command received: " + primaryInfo)
     console.log("Arguments: " + argumentInfo)
 
-    if (primaryInfo == "Elesis" || "elesis") {
+    if (primaryInfo == "Elesis") {
         elesisInfo(argumentInfo, receivedMessage)
-    } else if (primaryInfo == "Lass" || "lass") {
+    } else if (primaryInfo == "elesis") {
+        elesisInfo(argumentInfo, receivedMessage)
+    } else if (primaryInfo == "Lass") {
         lassInfo(argumentInfo, receivedMessage)
-    } else {
+    } else if (primaryInfo == "lass"){
+        lassInfo(argumentInfo, receivedMessage)
+    }else {
         receivedMessage.channel.send("Je ne comprend pas votre requête :(")
     }
 
