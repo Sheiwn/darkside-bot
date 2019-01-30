@@ -33,6 +33,9 @@ client.on('ready', () => {
     if (receivedMessage.content.startsWith(".")) {
         processCommand(receivedMessage)
     }
+        if (receivedMessage.content.startWith("_")){
+        processInfo(receivedMessage)
+    }
 })
     // Set bot status to: "Playing with JavaScript"
     client.user.setActivity("Grand Chase Mobile")
@@ -42,6 +45,32 @@ client.on('ready', () => {
     // For example:
     // client.user.setActivity("TV", {type: "WATCHING"})
 })
+
+function processInfo(receivedMessage) {
+    let fullInfo = receivedMessage.content.substr(1)
+    let splitInfo = fullInfo.split(" ")
+    let primaryInfo = splitInfo[0]
+    let argumentInfo = splitInfo.slice(1)
+
+    console.log("Command received: " + primaryInfo)
+    console.log("Arguments: " + argumentInfo)
+
+    if (primaryInfo == "Elesis") {
+        elesisInfo(argumentInfo, receivedMessage)
+    } else if (primaryInfo == "Lass") {
+        lassInfo(argumentInfo, receivedMessage)
+    } else {
+        receivedMessage.channel.send("Je ne comprend pas votre requête :(")
+    }
+
+}
+
+function elesisInfo(receivedMessage){
+    receivedMessage.channel.send("test1")
+}
+function lassInfo(receivedMessage){
+    receivedMessage.channel.send("test2")
+}
 
 function processCommand(receivedMessage) {
     let fullCommand = receivedMessage.content.substr(1) // Remove the leading exclamation mark
