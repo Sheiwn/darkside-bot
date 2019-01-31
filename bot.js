@@ -74,6 +74,7 @@ function elesisInfo(argumentInfo, receivedMessage, auteurMessage){
     receivedMessage.channel.send("Compétences : 5 en Chance de critiques, 3 en Réduction de dégâts de compétences et 2 en Réduction de dégâts d'attaque de base ")
 }
 function lassInfo(argumentInfo, receivedMessage, auteurMessage){
+    receivedMessage.channel.send(auteurMessage)
     receivedMessage.channel.send("Nom : Lass")
     receivedMessage.channel.send("Type : Attaquant")
     receivedMessage.channel.send("Classement : PVE = SS-, PvP Attack = SS+, PvP Defense = S+, Boss Dimensionnel = SS-")
@@ -81,6 +82,7 @@ function lassInfo(argumentInfo, receivedMessage, auteurMessage){
     receivedMessage.channel.send("Compétences : 5 en Chance de Critiques, 5 en Dégats de compétences")
 }
 function ryanInfo(argumentInfo, receivedMessage, auteurMessage){
+    receivedMessage.channel.send(auteurMessage)
     receivedMessage.channel.send("Nom : Ryan")
     receivedMessage.channel.send("Type : Tank")
     receivedMessage.channel.send("Classement : PVE = S+, PvP Attack = S-, PvP Defense = S-, Boss Dimensionnel = C")
