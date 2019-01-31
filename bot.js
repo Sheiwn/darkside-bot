@@ -15,7 +15,6 @@ client.on('ready', () => {
          
     client.on('message', (receivedMessage) => {
     // Prevent bot from responding to its own messages
-    // Prevent bot from responding to its own messages
     if (receivedMessage.author == client.user) {
         return
     }
