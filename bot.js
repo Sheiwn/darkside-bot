@@ -61,7 +61,11 @@ function processInfo(receivedMessage) {
 }
 
 function elesisInfo(argumentInfo, receivedMessage){
-    receivedMessage.channel.send("test1")
+    receivedMessage.channel.send("Nom : Elesis")
+    receivedMessage.channel.send("Type : Attaquante")
+    receivedMessage.channel.send("Classement : PVE = S+, PvP Attack = S, PvP Defense = S, Boss Dimensionnel = S")
+    receivedMessage.channel.send("Set d'équipement : Bleu (Tank) / Rose (Maximise le passif)")
+    receivedMessage.channel.send("Compétences : 5 en Chance de Critiques, 3 en Réduction de dégâts de compétences et 2 en Réduction de dégâts d'attaque de base ")
 }
 function lassInfo(argumentInfo, receivedMessage){
     receivedMessage.channel.send("test2")
