@@ -68,7 +68,11 @@ function elesisInfo(argumentInfo, receivedMessage){
     receivedMessage.channel.send("Compétences : 5 en Chance de Critiques, 3 en Réduction de dégâts de compétences et 2 en Réduction de dégâts d'attaque de base ")
 }
 function lassInfo(argumentInfo, receivedMessage){
-    receivedMessage.channel.send("test2")
+    receivedMessage.channel.send("Nom : Lass")
+    receivedMessage.channel.send("Type : Attaquant")
+    receivedMessage.channel.send("Classement : PVE = SS-, PvP Attack = SS+, PvP Defense = S+, Boss Dimensionnel = SS-")
+    receivedMessage.channel.send("Set d'équipement : Orange")
+    receivedMessage.channel.send("Compétences : 5 en Chance de Critiques, 5 en Dégats de compétences")
 }
 
 function processCommand(receivedMessage) {
