@@ -42,32 +42,34 @@ function processInfo(receivedMessage) {
     let splitInfo = fullInfo.split(" ")
     let primaryInfo = splitInfo[0]
     let argumentInfo = splitInfo.slice(1)
+    let auteurMessage = receivedMessage.author.toString()
 
     console.log("Command received: " + primaryInfo)
     console.log("Arguments: " + argumentInfo)
 
     if (primaryInfo == "Elesis") {
-        elesisInfo(argumentInfo, receivedMessage)
+        elesisInfo(argumentInfo, receivedMessage, auteurMessage)
     } else if (primaryInfo == "elesis") {
-        elesisInfo(argumentInfo, receivedMessage)
+        elesisInfo(argumentInfo, receivedMessage, auteurMessage)
     } else if (primaryInfo == "Lass") {
-        lassInfo(argumentInfo, receivedMessage)
+        lassInfo(argumentInfo, receivedMessage, auteurMessage)
     } else if (primaryInfo == "lass"){
-        lassInfo(argumentInfo, receivedMessage)
+        lassInfo(argumentInfo, receivedMessage, auteurMessage)
     }else {
         receivedMessage.channel.send("Je ne comprend pas votre requête :(")
     }
 
 }
 
-function elesisInfo(argumentInfo, receivedMessage){
+function elesisInfo(argumentInfo, receivedMessage, auteurMessage){
+    receivedMessage.channel.send(auteurMessage)
     receivedMessage.channel.send("Nom : Elesis")
     receivedMessage.channel.send("Type : Attaquante")
     receivedMessage.channel.send("Classement : PVE = S+, PvP Attack = S, PvP Defense = S, Boss Dimensionnel = S")
     receivedMessage.channel.send("Set d'équipement : Bleu (Tank) / Rose (Maximise le passif)")
     receivedMessage.channel.send("Compétences : 5 en Chance de Critiques, 3 en Réduction de dégâts de compétences et 2 en Réduction de dégâts d'attaque de base ")
 }
-function lassInfo(argumentInfo, receivedMessage){
+function lassInfo(argumentInfo, receivedMessage, auteurMessage){
     receivedMessage.channel.send("Nom : Lass")
     receivedMessage.channel.send("Type : Attaquant")
     receivedMessage.channel.send("Classement : PVE = SS-, PvP Attack = SS+, PvP Defense = S+, Boss Dimensionnel = SS-")
