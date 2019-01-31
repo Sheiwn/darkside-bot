@@ -55,6 +55,10 @@ function processInfo(receivedMessage) {
         lassInfo(argumentInfo, receivedMessage, auteurMessage)
     } else if (primaryInfo == "lass"){
         lassInfo(argumentInfo, receivedMessage, auteurMessage)
+    }else if (primaryInfo == "Ryan") {
+        ryanInfo(argumentInfo, receivedMessage, auteurMessage)
+    } else if (primaryInfo == "ryan"){
+        ryanInfo(argumentInfo, receivedMessage, auteurMessage)
     }else {
         receivedMessage.channel.send("Je ne comprend pas votre requête :(")
     }
@@ -67,7 +71,7 @@ function elesisInfo(argumentInfo, receivedMessage, auteurMessage){
     receivedMessage.channel.send("Type : Attaquante")
     receivedMessage.channel.send("Classement : PVE = S+, PvP Attack = S, PvP Defense = S, Boss Dimensionnel = S")
     receivedMessage.channel.send("Set d'équipement : Bleu (Tank) / Rose (Maximise le passif)")
-    receivedMessage.channel.send("Compétences : 5 en Chance de Critiques, 3 en Réduction de dégâts de compétences et 2 en Réduction de dégâts d'attaque de base ")
+    receivedMessage.channel.send("Compétences : 5 en Chance de critiques, 3 en Réduction de dégâts de compétences et 2 en Réduction de dégâts d'attaque de base ")
 }
 function lassInfo(argumentInfo, receivedMessage, auteurMessage){
     receivedMessage.channel.send("Nom : Lass")
@@ -75,6 +79,13 @@ function lassInfo(argumentInfo, receivedMessage, auteurMessage){
     receivedMessage.channel.send("Classement : PVE = SS-, PvP Attack = SS+, PvP Defense = S+, Boss Dimensionnel = SS-")
     receivedMessage.channel.send("Set d'équipement : Orange")
     receivedMessage.channel.send("Compétences : 5 en Chance de Critiques, 5 en Dégats de compétences")
+}
+function ryanInfo(argumentInfo, receivedMessage, auteurMessage){
+    receivedMessage.channel.send("Nom : Ryan")
+    receivedMessage.channel.send("Type : Tank")
+    receivedMessage.channel.send("Classement : PVE = S+, PvP Attack = S-, PvP Defense = S-, Boss Dimensionnel = C")
+    receivedMessage.channel.send("Set d'équipement : Bleu")
+    receivedMessage.channel.send("Compétences : 5 en Augmentation de soin reçu , 3 en Réduction de dégats de compétences et 2 en Réduction de dégats de base")
 }
 
 function processCommand(receivedMessage) {
