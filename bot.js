@@ -61,6 +61,7 @@ function processInfo(receivedMessage) {
 
 function elesisInfo(argumentInfo, receivedMessage, auteurMessage){
     receivedMessage.channel.send(auteurMessage)
+    receivedMessage.delete(1000)
     receivedMessage.channel.send("Nom : Elesis")
     receivedMessage.channel.send("Type : Attaquante")
     receivedMessage.channel.send("Classement : PVE = S+, PvP Attack = S, PvP Defense = S, Boss Dimensionnel = S")
