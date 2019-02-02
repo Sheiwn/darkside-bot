@@ -19,12 +19,6 @@ client.on('ready', () => {
         return
     }
     
-    // Check if the bot's user was tagged in the message
-    if (receivedMessage.content.includes(client.user.toString())) {
-        // Send acknowledgement message
-        receivedMessage.channel.send("Message received from " +
-            receivedMessage.author.toString() + ": " + receivedMessage.content)
-    }
     if (receivedMessage.content.startsWith(".")) {
         processCommand(receivedMessage)
     }
