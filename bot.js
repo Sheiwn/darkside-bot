@@ -43,11 +43,11 @@ function processInfo(receivedMessage) {
     console.log("Arguments: " + argumentInfo)
 
     if ((primaryInfo == "Elesis" && primaryInfo != "elesis") || (primaryInfo == "elesis" && primaryInfo != "Elesis"))  {
-        heroInfo(argumentInfo, receivedMessage, auteurMessage)
+        elesisInfo(argumentInfo, receivedMessage, auteurMessage)
     }  else if ((primaryInfo == "Lass" && primaryInfo != "lass") || (primaryInfo == "lass" && primaryInfo != "Lass")) {
-        heroInfo(argumentInfo, receivedMessage, auteurMessage)
+        lassInfo(argumentInfo, receivedMessage, auteurMessage)
     }  else if ((primaryInfo == "Ryan" && primaryInfo != "ryan") || (primaryInfo == "ryan" && primaryInfo != "Ryan")) {
-        heroInfo(argumentInfo, receivedMessage, auteurMessage)
+        ryanInfo(argumentInfo, receivedMessage, auteurMessage)
     }  else {
         receivedMessage.channel.send("Je ne comprend pas votre requête :(")
     }
