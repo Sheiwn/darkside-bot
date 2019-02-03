@@ -65,6 +65,7 @@ function elesisInfo(argumentInfo, receivedMessage, auteurMessage){
 }
 function lassInfo(argumentInfo, receivedMessage, auteurMessage){
     receivedMessage.channel.send(auteurMessage)
+    receivedMessage.delete(1000)
     receivedMessage.channel.send("Nom : Lass")
     receivedMessage.channel.send("Type : Attaquant")
     receivedMessage.channel.send("Classement : PVE = SS-, PvP Attack = SS+, PvP Defense = S+, Boss Dimensionnel = SS-")
@@ -73,6 +74,7 @@ function lassInfo(argumentInfo, receivedMessage, auteurMessage){
 }
 function ryanInfo(argumentInfo, receivedMessage, auteurMessage){
     receivedMessage.channel.send(auteurMessage)
+    receivedMessage.delete(1000)
     receivedMessage.channel.send("Nom : Ryan")
     receivedMessage.channel.send("Type : Tank")
     receivedMessage.channel.send("Classement : PVE = S+, PvP Attack = S-, PvP Defense = S-, Boss Dimensionnel = C")
