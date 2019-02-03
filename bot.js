@@ -62,20 +62,12 @@ function elesisInfo(argumentInfo, receivedMessage, auteurMessage){
 function lassInfo(argumentInfo, receivedMessage, auteurMessage){
     receivedMessage.channel.send(auteurMessage)
     receivedMessage.delete(1000)
-    receivedMessage.channel.send("Nom : Lass")
-    receivedMessage.channel.send("Type : Attaquant")
-    receivedMessage.channel.send("Classement : PVE = SS-, PvP Attack = SS+, PvP Defense = S+, Boss Dimensionnel = SS-")
-    receivedMessage.channel.send("Set d'équipement : Orange")
-    receivedMessage.channel.send("Compétences : 5 en Chance de Critiques, 5 en Dégats de compétences")
+    receivedMessage.channel.send("Nom : Lass\nType : Attaquant\nClassement : PVE = SS-, PvP Attack = SS+, PvP Defense = S+, Boss Dimensionnel = SS-\nSet d'équipement : Orange\nCompétences : 5 en Chance de Critiques, 5 en Dégats de compétences")
 }
 function ryanInfo(argumentInfo, receivedMessage, auteurMessage){
     receivedMessage.channel.send(auteurMessage)
     receivedMessage.delete(1000)
-    receivedMessage.channel.send("Nom : Ryan")
-    receivedMessage.channel.send("Type : Tank")
-    receivedMessage.channel.send("Classement : PVE = S+, PvP Attack = S-, PvP Defense = S-, Boss Dimensionnel = C")
-    receivedMessage.channel.send("Set d'équipement : Bleu")
-    receivedMessage.channel.send("Compétences : 5 en Augmentation de soin reçu , 3 en Réduction de dégats de compétences et 2 en Réduction de dégats de base")
+    receivedMessage.channel.send("Nom : Ryan\nType : Tank\nClassement : PVE = S+, PvP Attack = S-, PvP Defense = S-, Boss Dimensionnel = C\nSet d'équipement : Bleu\nCompétences : 5 en Augmentation de soin reçu , 3 en Réduction de dégats de compétences et 2 en Réduction de dégats de base")
 }
 
 function processCommand(receivedMessage) {
