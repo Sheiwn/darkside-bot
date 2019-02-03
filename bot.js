@@ -1,13 +1,6 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
 
-const fs = require('fs')
-
-(async function(){
-    var fileContents = await fs.promises.readFile(heroes.json)
-    var data = JSON.parse(fileContents)
-    console.log(data.firstName+ " " + data.type)
-})()
 
 client.on('ready', () => {
     console.log("Connected as " + client.user.tag)
