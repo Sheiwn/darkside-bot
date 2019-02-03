@@ -6,6 +6,7 @@ const fs = require('fs')
 (async function(){
     var fileContents = await fs.promises.readFile(heroes.json)
     var data = JSON.parse(fileContents)
+    console.log(data.firstName+ " " + data.type)
 })()
 
 client.on('ready', () => {
