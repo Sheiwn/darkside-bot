@@ -57,11 +57,7 @@ function processInfo(receivedMessage) {
 function elesisInfo(argumentInfo, receivedMessage, auteurMessage){
     receivedMessage.channel.send(auteurMessage)
     receivedMessage.delete(1000)
-    receivedMessage.channel.send("Nom : Elesis")
-    receivedMessage.channel.send("Type : Attaquante")
-    receivedMessage.channel.send("Classement : PVE = S+, PvP Attack = S, PvP Defense = S, Boss Dimensionnel = S")
-    receivedMessage.channel.send("Set d'équipement : Bleu (Tank) / Rose (Maximise le passif)")
-    receivedMessage.channel.send("Compétences : 5 en Chance de critiques, 3 en Réduction de dégâts de compétences et 2 en Réduction de dégâts d'attaque de base ")
+    receivedMessage.channel.send("Nom : Elesis\nType : Attaquante\nClassement : PVE = S+, PvP Attack = S, PvP Defense = S, Boss Dimensionnel = S\nSet d'équipement : Bleu (Tank) / Rose (Maximise le passif)\nCompétences : 5 en Chance de critiques, 3 en Réduction de dégâts de compétences et 2 en Réduction de dégâts d'attaque de base ")
 }
 function lassInfo(argumentInfo, receivedMessage, auteurMessage){
     receivedMessage.channel.send(auteurMessage)
